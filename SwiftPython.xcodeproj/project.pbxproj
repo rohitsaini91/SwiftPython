@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		225469E923E3706C00BC79E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225469E723E3706C00BC79E0 /* Main.storyboard */; };
 		225469EB23E3707200BC79E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225469EA23E3707200BC79E0 /* Assets.xcassets */; };
 		225469EE23E3707200BC79E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225469EC23E3707200BC79E0 /* LaunchScreen.storyboard */; };
+		225469F723E3736600BC79E0 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 225469F623E3736600BC79E0 /* PythonKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		225469EA23E3707200BC79E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		225469ED23E3707200BC79E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		225469EF23E3707200BC79E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225469F823E376F200BC79E0 /* SwiftPython.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftPython.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				225469F723E3736600BC79E0 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +59,7 @@
 		225469E023E3706C00BC79E0 /* SwiftPython */ = {
 			isa = PBXGroup;
 			children = (
+				225469F823E376F200BC79E0 /* SwiftPython.entitlements */,
 				225469E123E3706C00BC79E0 /* AppDelegate.swift */,
 				225469E323E3706C00BC79E0 /* SceneDelegate.swift */,
 				225469E523E3706C00BC79E0 /* ViewController.swift */,
@@ -83,6 +87,9 @@
 			dependencies = (
 			);
 			name = SwiftPython;
+			packageProductDependencies = (
+				225469F623E3736600BC79E0 /* PythonKit */,
+			);
 			productName = SwiftPython;
 			productReference = 225469DE23E3706C00BC79E0 /* SwiftPython.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +118,9 @@
 				Base,
 			);
 			mainGroup = 225469D523E3706C00BC79E0;
+			packageReferences = (
+				225469F523E3736600BC79E0 /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = 225469DF23E3706C00BC79E0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -284,6 +294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftPython/SwiftPython.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79Q9WFF2X8;
 				INFOPLIST_FILE = SwiftPython/Info.plist;
@@ -302,6 +313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftPython/SwiftPython.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79Q9WFF2X8;
 				INFOPLIST_FILE = SwiftPython/Info.plist;
@@ -338,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		225469F523E3736600BC79E0 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		225469F623E3736600BC79E0 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 225469F523E3736600BC79E0 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 225469D623E3706C00BC79E0 /* Project object */;
 }
